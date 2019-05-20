@@ -1,0 +1,17 @@
+.skills-container{
+    padding-bottom: 2rem; 
+}
+
+.dev-skills{
+    text-align: center;
+}
+
+.devicon{
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.skill-text{
+    font-size: 1.5rem;
+    position: relative;
+}
