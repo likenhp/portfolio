@@ -1,13 +1,17 @@
 $(function() {
-
+	
 	// Get the form.
 	var form = $('#contact-form');
 
 	// Get the messages div.
 	var formMessages = $('.ajax-response');
 
+	//can click on button
+	var buttonFlag = true;
+
 	// Set up an event listener for the contact form.
 	$(form).submit(function(e) {
+		debugger;
 		// Stop the browser from submitting the form.
 		e.preventDefault();
 
