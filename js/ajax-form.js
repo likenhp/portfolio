@@ -6,9 +6,6 @@ $(function() {
 	// Get the messages div.
 	var formMessages = $('.ajax-response');
 
-	//can click on button
-	var buttonFlag = true;
-
 	// Set up an event listener for the contact form.
 	$(form).submit(function(e) {
 		debugger;
