@@ -1,4 +1,5 @@
 $(function () {
+    debugger;
     $("#contact-form input,#contact-form textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function ($form, event, errors) {
@@ -7,7 +8,6 @@ $(function () {
         submitSuccess: function ($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
-            debugger;
             var name = $("input#name").val();
             var email = $("input#email").val();
             var subject = $("input#subject").val();
@@ -20,7 +20,7 @@ $(function () {
             $this = $("#sendMessageButton");
             $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             $.ajax({
-                url: "../mail_handler.php",
+                url: "../../mail_handler.php",
                 type: "POST",
                 data: {
                     name: name,
@@ -30,6 +30,7 @@ $(function () {
                 },
                 cache: false,
                 success: function () {
+                    debugger;
                     // Success message
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -39,9 +40,10 @@ $(function () {
                     $('#success > .alert-success')
                         .append('</div>');
                     //clear all fields
-                    $('#contactForm').trigger("reset");
+                    $('#contact-form').trigger("reset");
                 },
                 error: function () {
+                    debugger;
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
