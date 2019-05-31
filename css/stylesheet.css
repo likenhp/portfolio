@@ -29,3 +29,8 @@
     background-color: rgb(231, 231, 231);
 }
 
+#home{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
