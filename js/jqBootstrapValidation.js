@@ -400,7 +400,7 @@
               "validation.validation",
               function(event, params) {
   
-                var value = getValue($this);
+                var value = getValue($this).trim();
   
                 // Get a list of the errors to apply
                 var errorsFound = [];
