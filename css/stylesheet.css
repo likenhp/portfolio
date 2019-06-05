@@ -34,3 +34,7 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.contact-text > span{
+    color: #444444;
+}
