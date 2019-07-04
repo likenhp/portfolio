@@ -42,3 +42,8 @@
 .hero{
     height: 100vh;
 }
+
+.about{
+    color: black;
+    font-size: 1rem;
+}
